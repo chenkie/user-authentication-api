@@ -1,0 +1,30 @@
+{
+  "name": "hapi-jwt-authentication",
+  "version": "0.0.0",
+  "description": "Sample API for protecting routes with JWT authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "authentication",
+    "jwt",
+    "api"
+  ],
+  "author": "Auth0",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "boom": "^3.2.2",
+    "dotenv": "^2.0.0",
+    "glob": "^7.1.1",
+    "hapi": "^13.5.3",
+    "hapi-auth-jwt": "^4.0.0",
+    "joi": "^8.4.2",
+    "joi-objectid": "^2.0.0",
+    "jsonwebtoken": "^5.7.0",
+    "md5": "^2.2.1",
+    "mongoose": "^4.6.5"
+  }
+}
