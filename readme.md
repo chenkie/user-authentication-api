@@ -13,6 +13,18 @@ node server.js
 
 The app will be served at `localhost:3001`.
 
+## Local Setup
+
+To setup the API locally, you will need to run MongoDB or have an MLab instance. Create a `.env` file and populate it with the following values:
+
+```bash
+SECRET_KEY=<secret_key>
+MLAB_USER=<mlab_user>
+MLAB_PASSWORD=<secret_key>
+MLAB_DOMAIN=<domain>
+MLAB_DB=<database>
+```
+
 ## Available Routes
 
 #### **POST** `/api/users`
