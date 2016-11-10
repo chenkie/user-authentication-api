@@ -1,5 +1,5 @@
 {
-  "name": "hapi-jwt-authentication",
+  "name": "user-authentication-api",
   "version": "0.0.0",
   "description": "Sample API for protecting routes with JWT authentication",
   "main": "server.js",
