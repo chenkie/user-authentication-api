@@ -2,6 +2,10 @@
 
 This sample project demonstrates how to set up a user authentication API with Hapi.js using JSON Web Tokens. There are several endpoints exposed in the sample, including user login and signup, along with an example of a protected `instructors` resource.
 
+## Demo API
+
+The API for the course is served at **https://user-authentication-api.now.sh/api**
+
 ## Installation and Running the App
 
 Clone the repo, then: 
