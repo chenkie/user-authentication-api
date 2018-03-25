@@ -35,7 +35,7 @@ MLAB_DB=<database>
 * Used for signing up a user. Accepts `username`, `email`, and `password` to create a user. Returns a JWT.
 
 #### **POST** `/api/users/authenticate`
-* Used for logging a user in. Accepts `username` or `email` and `password` to authenticate a user. Returns a JWT.
+* Used for logging a user in. Accepts `user` (where you can supply a users `username` or `email`) and `password` to authenticate a user. Returns a JWT.
 
 #### **GET** `/api/users`
 * Returns all users in the database. Requires a valid JWT with an `admin` scope.
