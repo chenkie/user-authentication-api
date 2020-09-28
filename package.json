@@ -15,16 +15,21 @@
   "author": "Auth0",
   "license": "MIT",
   "dependencies": {
-    "bcrypt": "^0.8.7",
+    "bcrypt": "^5.0.0",
     "boom": "^3.2.2",
-    "dotenv": "^2.0.0",
-    "glob": "^7.1.1",
+    "dotenv": "^8.2.0",
+    "glob": "^7.1.6",
     "hapi": "^13.5.3",
     "hapi-auth-jwt": "^4.0.0",
-    "joi": "^8.4.2",
-    "joi-objectid": "^2.0.0",
-    "jsonwebtoken": "^5.7.0",
-    "md5": "^2.2.1",
-    "mongoose": "^4.6.5"
+    "joi": "^13.0.0",
+    "joi-objectid": "^3.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongoose": "^5.10.7"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid",
+    "trailingComma": "none"
   }
 }

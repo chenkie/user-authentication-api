@@ -13,27 +13,23 @@ module.exports = {
       scope: ['admin']
     },
     handler: (req, res) => {
-
       const _id = req.params.id;
 
-      Instructor
-        .findOneAndRemove({ _id })
-        .exec((err, data) => {
-          if (err) {
-            throw Boom.badRequest(err);
-          }
+      Instructor.findOneAndRemove({ _id }).exec((err, data) => {
+        if (err) {
+          throw Boom.badRequest(err);
+        }
 
-          if (!data) {
-            throw Boom.notFound('Instructor not found!');
-          }
-          
-          res({ message: 'Instructor deleted!' });
-        });     
+        if (!data) {
+          throw Boom.notFound('Instructor not found!');
+        }
 
+        res({ message: 'Instructor deleted!' });
+      });
     },
     // Validate the payload against the Joi schema
     validate: {
       params: deleteInstructorSchema
     }
   }
-}
+};

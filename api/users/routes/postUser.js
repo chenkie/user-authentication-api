@@ -4,7 +4,8 @@ const bcrypt = require('bcrypt');
 const Boom = require('boom');
 const User = require('../model/User');
 const postUserSchema = require('../schemas/postUser');
-const verifyUniqueUser = require('../../../util/userFunctions').verifyUniqueUser;
+const verifyUniqueUser = require('../../../util/userFunctions')
+  .verifyUniqueUser;
 const createToken = require('../../../util/token');
 
 function hashPassword(password, cb) {
@@ -22,11 +23,8 @@ module.exports = {
   config: {
     auth: false,
     // Before the route handler runs, verify that the user is unique
-    pre: [
-      { method: verifyUniqueUser }
-    ],
+    pre: [{ method: verifyUniqueUser }],
     handler: (req, res) => {
-
       let user = new User();
       user.email = req.payload.email;
       user.username = req.payload.username;
@@ -44,11 +42,10 @@ module.exports = {
           res({ token: createToken(user) });
         });
       });
-
     },
     // Validate the payload against the Joi schema
     validate: {
       payload: postUserSchema
     }
   }
-}
+};

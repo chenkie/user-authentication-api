@@ -9,8 +9,7 @@ module.exports = {
   config: {
     auth: false,
     handler: (req, res) => {
-      User
-        .find()
+      User.find()
         // Deselect the password and version fields
         .select('-password -__v')
         .exec((err, users) => {
@@ -21,7 +20,7 @@ module.exports = {
             throw Boom.notFound('No users found!');
           }
           res(users);
-        })
-    }    
+        });
+    }
   }
-}
+};

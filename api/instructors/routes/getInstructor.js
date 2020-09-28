@@ -11,11 +11,9 @@ module.exports = {
       strategy: 'jwt'
     },
     handler: (req, res) => {
-      
       const _id = req.params.id;
 
-      Instructor
-        .findOne({ _id })
+      Instructor.findOne({ _id })
         // Deselect the password and version fields
         .select('-__v')
         .exec((err, data) => {
@@ -29,4 +27,4 @@ module.exports = {
         });
     }
   }
-}
+};

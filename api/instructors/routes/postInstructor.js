@@ -13,7 +13,6 @@ module.exports = {
       scope: ['admin']
     },
     handler: (req, res) => {
-
       let instructor = new Instructor(req.payload);
 
       instructor.save((err, data) => {
@@ -23,12 +22,11 @@ module.exports = {
         }
 
         res({ message: 'Instructor created!', data }).code(201);
-      });      
-
+      });
     },
     // Validate the payload against the Joi schema
     validate: {
       payload: postInstructorSchema
     }
   }
-}
+};

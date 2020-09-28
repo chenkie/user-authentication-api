@@ -16,4 +16,4 @@ const paramsSchema = Joi.object({
 module.exports = {
   payloadSchema: payloadSchema,
   paramsSchema: paramsSchema
-}
+};
