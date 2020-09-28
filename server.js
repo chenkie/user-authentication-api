@@ -11,7 +11,7 @@ const server = new Hapi.Server();
 
 // The connection object takes some
 // configuration, including the port
-server.connection({ port: 3001, routes: { cors: true } });
+server.connection({ port: process.env.PORT || 3001, routes: { cors: true } });
 
 server.register(require('hapi-auth-jwt'), err => {
   // We are giving the strategy a name of 'jwt'
